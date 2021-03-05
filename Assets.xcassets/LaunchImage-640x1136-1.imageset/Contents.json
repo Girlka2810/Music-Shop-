@@ -1,11 +1,11 @@
 {
   "images" : [
     {
+      "filename" : "LaunchImage-640x1136.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "music_shop_main_view.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },
