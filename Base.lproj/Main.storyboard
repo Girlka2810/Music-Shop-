@@ -17,13 +17,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Music Shop" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r13-i7-NKC">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Music Shop" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r13-i7-NKC">
                                 <rect key="frame" x="0.0" y="44" width="414" height="50"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="5UL-6J-zNV"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="46"/>
+                                <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="46"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -123,7 +123,7 @@
                                         <color key="tintColor" systemColor="systemBackgroundColor"/>
                                         <state key="normal" title="Корзина"/>
                                         <connections>
-                                            <segue destination="P1R-BG-RYS" kind="show" id="JV5-DW-klh"/>
+                                            <segue destination="P1R-BG-RYS" kind="show" identifier="toBasketVC" id="JV5-DW-klh"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -196,6 +196,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="mrh-77-YKW"/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -221,21 +223,47 @@
                                     <color key="titleShadowColor" name="AccentColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="sqs-df-QJJ"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="toMainVC" id="sqs-df-QJJ"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yva-xv-Ox5">
+                                <rect key="frame" x="0.0" y="158" width="414" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="2sC-q2-o6X"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Music Shop" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="naV-5h-JSv">
+                                <rect key="frame" x="0.0" y="98" width="414" height="50"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="c4a-Cb-yOd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="46"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2r4-Cv-qeO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="2r4-Cv-qeO" firstAttribute="trailing" secondItem="yPF-YX-qmD" secondAttribute="trailing" id="2SG-hT-KFO"/>
+                            <constraint firstItem="naV-5h-JSv" firstAttribute="top" secondItem="2r4-Cv-qeO" secondAttribute="top" constant="10" id="3bg-t2-8KJ"/>
+                            <constraint firstItem="2r4-Cv-qeO" firstAttribute="trailing" secondItem="Yva-xv-Ox5" secondAttribute="trailing" id="9dn-6V-Jo1"/>
                             <constraint firstItem="2r4-Cv-qeO" firstAttribute="bottom" secondItem="yPF-YX-qmD" secondAttribute="bottom" constant="10" id="EHh-45-B0C"/>
+                            <constraint firstItem="Yva-xv-Ox5" firstAttribute="leading" secondItem="2r4-Cv-qeO" secondAttribute="leading" id="P6l-Fx-17f"/>
+                            <constraint firstItem="2r4-Cv-qeO" firstAttribute="trailing" secondItem="naV-5h-JSv" secondAttribute="trailing" id="Qka-me-duN"/>
+                            <constraint firstItem="Yva-xv-Ox5" firstAttribute="top" secondItem="naV-5h-JSv" secondAttribute="bottom" constant="10" id="RqL-YM-bv1"/>
                             <constraint firstItem="yPF-YX-qmD" firstAttribute="leading" secondItem="2r4-Cv-qeO" secondAttribute="leading" id="a2o-ch-l37"/>
+                            <constraint firstItem="naV-5h-JSv" firstAttribute="leading" secondItem="l8t-kW-AdQ" secondAttribute="leading" id="u40-9U-hqW"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" id="vf2-Jz-G3Q"/>
+                    <navigationItem key="navigationItem" id="0OL-Av-3r8"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <splitViewDetailSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sl4-b2-UPt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -244,6 +272,7 @@
         <!--Navigation Controller-->
         <scene sceneID="41z-tR-TlP">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dGP-0B-vez" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="ZBR-n2-lbt" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="qFw-4L-2xE"/>
@@ -256,7 +285,6 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="yPp-K0-ADV"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dGP-0B-vez" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-287" y="75"/>
         </scene>
